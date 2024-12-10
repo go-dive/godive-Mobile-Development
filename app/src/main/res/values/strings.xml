@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">godive</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_title">Go Dive</string>
+    <string name="home">Hello Home Fragment</string>
+    <string name="title_home">Diving to\nInteresting Place</string>
+    <string name="health">HEALTH</string>
+    <string name="equipment">EQUIPMENT</string>
+    <string name="fish">FISH</string>
+    <string name="next">Next</string>
+    <string name="desc_health">Sebelum melakukan Diving, cek dulu yaa kesehatannya untuk keselamatan selama Diving. :) Selamat Diving !</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

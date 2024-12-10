@@ -1,0 +1,97 @@
+[versions]
+activityKtx = "1.3.1"
+agp = "8.6.0"
+appcompatVersion = "1.3.1"
+githubGlide = "4.12.0"
+glide = "4.16.0"
+glideVersion = "4.13.0"
+googleMaterial = "1.4.0"
+googleMaterialVersion = "1.8.0"
+kotlin = "1.9.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinxCoroutinesAndroid = "1.6.0"
+lifecycleExtensions = "2.2.0"
+lifecycleLivedataKtx = "2.8.7"
+lifecycleLivedataKtxVersion = "2.5.1"
+lifecycleRuntimeKtx = "2.7.1"
+loggingInterceptor = "4.11.0"
+loggingInterceptorVersion = "4.9.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+materialVersion = "1.9.0"
+okhttp = "4.9.1"
+okhttpVersion = "4.9.0"
+playServicesTfliteGpu = "16.2.0"
+playServicesTfliteSupport = "16.1.0"
+retrofit = "2.9.0"
+roboPojoGenerator = "1.3.0"
+roomCompiler = "2.5.0"
+roomKtx = "2.5.0"
+roomRuntime = "2.6.1"
+roomRuntimeVersion = "2.5.0"
+tensorflowLite = "2.12.0"
+tensorflowLiteMetadata = "0.4.4"
+tensorflowLiteSupport = "2.9.0"
+tensorflowLiteTaskVisionPlayServices = "0.4.2"
+tensorflowLiteVersion = "2.10.0"
+tensorflowTensorflowLite = "2.9.0"
+
+[libraries]
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
+androidx-appcompat-v131 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-livedata-ktx-v251 = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtxVersion" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-compiler-v250 = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-ktx-v250 = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+androidx-room-runtime-v250 = { module = "androidx.room:room-runtime", version.ref = "roomRuntimeVersion" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glideVersion" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-v4120 = { module = "com.github.bumptech.glide:glide", version.ref = "githubGlide" }
+glide-v4130 = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+logging-interceptor-v490 = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptorVersion" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material-v140 = { module = "com.google.android.material:material", version.ref = "googleMaterial" }
+material-v180 = { module = "com.google.android.material:material", version.ref = "googleMaterialVersion" }
+material-v190 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "loggingInterceptor" }
+okhttp-v490 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
+okhttp-v491 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+play-services-tflite-gpu = { module = "com.google.android.gms:play-services-tflite-gpu", version.ref = "playServicesTfliteGpu" }
+play-services-tflite-support = { module = "com.google.android.gms:play-services-tflite-support", version.ref = "playServicesTfliteSupport" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+robo-pojo-generator = { module = "com.github.RoboPOJO:robo-pojo-generator", version.ref = "roboPojoGenerator" }
+tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
+tensorflow-lite-gpu = { module = "org.tensorflow:tensorflow-lite-gpu", version.ref = "tensorflowLiteSupport" }
+tensorflow-lite-metadata = { module = "org.tensorflow:tensorflow-lite-metadata", version.ref = "tensorflowLiteMetadata" }
+tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteVersion" }
+tensorflow-lite-support-v290 = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
+tensorflow-lite-task-vision = { module = "org.tensorflow:tensorflow-lite-task-vision", version.ref = "tensorflowLiteSupport" }
+tensorflow-lite-task-vision-play-services = { module = "org.tensorflow:tensorflow-lite-task-vision-play-services", version.ref = "tensorflowLiteTaskVisionPlayServices" }
+tensorflow-lite-v2100 = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLiteVersion" }
+tensorflow-lite-v290 = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowTensorflowLite" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

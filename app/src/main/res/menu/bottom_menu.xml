@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="Home"
+        android:icon="@drawable/home1"/>
+
+    <item
+        android:id="@+id/bottom_cuaca"
+        android:title="Cuaca"
+        android:icon="@drawable/cuaca1"/>
+
+    <item
+        android:id="@+id/bottom_artikel"
+        android:title="Artikel"
+        android:icon="@drawable/artikel"/>
+
+    <item
+        android:id="@+id/bottom_favorite"
+        android:title="Favorite"
+        android:icon="@drawable/favorite"/>
+
+    <item
+        android:id="@+id/bottom_profile"
+        android:title="Profile"
+        android:icon="@drawable/user1"/>
+
+
+</menu>

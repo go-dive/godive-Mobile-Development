@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.artikel.DetailArtikelActivity">
+
+    <!-- Linear Layout for vertical stacking -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Image View with rounded corners and full width with height adjustment -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/detailImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_image_background" />
+
+        <!-- Detail Name Text -->
+        <TextView
+            android:id="@+id/detailNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Raja Ampat"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="16dp" />
+
+        <!-- Location and Rating in a horizontal LinearLayout -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <!-- Location Icon and Text -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <!-- Location Icon -->
+                <ImageView
+                    android:id="@+id/locationIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_location" />
+
+                <!-- Location Text -->
+                <TextView
+                    android:id="@+id/detailLokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Rating Icon and Text -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <!-- Rating Icon -->
+                <ImageView
+                    android:id="@+id/ratingIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_star"
+                    />
+
+                <!-- Rating Text -->
+                <TextView
+                    android:id="@+id/detailRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating: 4.5"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/favoriteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite"
+                android:contentDescription="Favorite"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="end"/>
+        </LinearLayout>
+
+        <!-- Detail Description Text -->
+        <TextView
+            android:id="@+id/detailDeskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Raja Ampat adalah kepulauan di Papua Barat, Indonesia, terkenal dengan keindahan alam bawah lautnya yang kaya, terumbu karang, dan biodiversitas yang luar biasa. Destinasi ini populer bagi para penyelam dan pecinta alam."
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"/>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
