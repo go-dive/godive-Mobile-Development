@@ -1,14 +1,61 @@
 <resources>
-    <string name="app_name">godive</string>
+    <string name="app_name">GoDive</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="app_title">Go Dive</string>
     <string name="home">Hello Home Fragment</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    Home Fragment-->
+    <string name="nama_profile">Hi, Dimas Fauzian</string>
     <string name="title_home">Diving to\nInteresting Place</string>
     <string name="health">HEALTH</string>
     <string name="equipment">EQUIPMENT</string>
     <string name="fish">FISH</string>
-    <string name="next">Next</string>
+<!--    ACTIVITY HEALTH -->
     <string name="desc_health">Sebelum melakukan Diving, cek dulu yaa kesehatannya untuk keselamatan selama Diving. :) Selamat Diving !</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question_health">Question Health</string>
+    <string name="pertanyaan1">Masalah Pernafasan/Jantung/Covid?</string>
+    <string name="pertanyaan2">Umur > 45 Tahun?</string>
+    <string name="pertanyaan3">Tidak Dapat Olahraga Ringan?</string>
+    <string name="pertanyaan4">Masalah Mata/Telinga/Sinus?</string>
+    <string name="pertanyaan5">Operasi Terakhir 12 Bulan?</string>
+    <string name="pertanyaan6">Masalah Neurologis</string>
+    <string name="pertanyaan7">Perawatan Psikologis</string>
+    <string name="pertanyaan8">Masalah Punggung/Diabetes</string>
+    <string name="pertanyaan9">Masalah Perut/Usus</string>
+    <string name="pertanyaan10">Mengonsumsi Obat</string>
+    <string name="proces">Process</string>
+<!--    activity equipment-->
+    <string name="desc_equipment">Sebelum melakukan Diving, cek dulu yaa perlengkapannya untuk keselamatan selama Diving. :) Selamat Diving !</string>
+    <string name="select_image">Select Image</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="predict">Predict</string>
+    <string name="decs_result_equipment">Perlengkapan Anda sudah lengkap. :) Selamat Diving !</string>
+<!--    activity fish-->
+    <string name="desc_fish">Sebelum melakukan Diving, Anda harus tahu terlebih dahulu ikan yang berbahaya dan aman selama Diving. :) Cek dulu yu !</string>
+    <string name="camera">Camera</string>
+    <string name="galery">Gallery</string>
+
+<!--    artikel-->
+    <string name="judul_artikel">Raja Ampat</string>
+    <string name="loc">Lokasi</string>
+    <string name="rating">Rating: 4.5</string>
+    <string name="desc_artikel">Raja Ampat adalah kepulauan di Papua Barat, Indonesia, terkenal dengan keindahan alam bawah lautnya yang kaya, terumbu karang, dan biodiversitas yang luar biasa. Destinasi ini populer bagi para penyelam dan pecinta alam.</string>
+
+<!--    cuaca-->
+    <string name="judul_cuaca">Cek cuaca Hari ini dulu yah , demi keselamatan kamu :)</string>
+    <string name="city">City</string>
+
+<!--    Login-->
+    <string name="judul_login">Login to\nyour account</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="register1">Don’t have an account? Register!</string>
+    <string name="judul_register">Create\nyour account</string>
 </resources>

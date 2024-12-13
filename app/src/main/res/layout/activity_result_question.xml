@@ -38,7 +38,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
-        android:text="Back"
+        android:text="@string/back"
         android:onClick="onBackClick"
         android:textColor="@color/white"
         android:textSize="24sp"

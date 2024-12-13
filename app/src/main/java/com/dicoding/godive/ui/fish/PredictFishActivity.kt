@@ -1,30 +1,27 @@
 package com.dicoding.godive.ui.fish
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
-import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.FileProvider
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.dicoding.godive.R
 import com.dicoding.godive.data.fish.ImageClassifier
-import org.tensorflow.lite.Interpreter
-import java.io.File
-import java.io.FileInputStream
 import java.io.IOException
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 
 class PredictFishActivity : AppCompatActivity() {
 
     private val PICK_IMAGE_REQUEST = 1
     private val REQUEST_TAKE_PHOTO = 101
+    private val CAMERA_PERMISSION_REQUEST_CODE = 102
     private lateinit var imageView: ImageView
     private var selectedImageBitmap: Bitmap? = null
 
@@ -39,14 +36,22 @@ class PredictFishActivity : AppCompatActivity() {
 
         // Button to pick image from gallery
         pickImageButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            val intent = Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(intent, PICK_IMAGE_REQUEST)
         }
 
         // Button to take a photo using the camera
         takePhotoButton.setOnClickListener {
-            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(intent, REQUEST_TAKE_PHOTO)
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_GRANTED) {
+                val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivityForResult(intent, REQUEST_TAKE_PHOTO)
+            } else {
+                // Request permission to use camera
+                ActivityCompat.requestPermissions(this,
+                    arrayOf(Manifest.permission.CAMERA),
+                    CAMERA_PERMISSION_REQUEST_CODE)
+            }
         }
 
         // Button to predict the image
@@ -62,7 +67,8 @@ class PredictFishActivity : AppCompatActivity() {
                 Toast.makeText(this, "Silakan pilih gambar terlebih dahulu", Toast.LENGTH_SHORT).show()
             }
         }
-        // Tangani klik tombol kembali
+
+        // Handle back button click
         findViewById<Button>(R.id.btnBack).setOnClickListener {
             finish()  // Close the activity
         }
@@ -75,7 +81,7 @@ class PredictFishActivity : AppCompatActivity() {
             if (requestCode == PICK_IMAGE_REQUEST) {
                 val imageUri: Uri = data?.data ?: return
                 try {
-                    selectedImageBitmap = MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
+                    selectedImageBitmap = android.provider.MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
                     imageView.setImageBitmap(selectedImageBitmap)
                 } catch (e: IOException) {
                     e.printStackTrace()
@@ -86,5 +92,19 @@ class PredictFishActivity : AppCompatActivity() {
             }
         }
     }
-}
 
+    // Handle the result of permission request
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == CAMERA_PERMISSION_REQUEST_CODE) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted, open camera
+                val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivityForResult(intent, REQUEST_TAKE_PHOTO)
+            } else {
+                // Permission denied, show a message to the user
+                Toast.makeText(this, "Izin kamera diperlukan untuk mengambil foto", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}

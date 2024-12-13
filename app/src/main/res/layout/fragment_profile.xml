@@ -3,14 +3,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".ui.profile.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Background Image -->
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment"
-        android:textSize="36sp"
-        android:textColor="@color/blue"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bg_profile"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/profile1"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            app:shapeAppearanceOverlay="@style/CircularImageShape" /> <!-- Background bulat -->
+
+        <!-- Name Text -->
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dimas Fauzian As'aryanda"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+        <!-- Email Text -->
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dimasfauzian01@gmail.com"
+            android:textSize="17sp"
+            android:padding="16dp"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_logout"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="50dp"/>
+    </LinearLayout>
 </FrameLayout>

@@ -44,17 +44,12 @@ android {
 }
 
 dependencies {
-    // TensorFlow Lite
     implementation(libs.tensorflow.lite.metadata)
     implementation(libs.play.services.tflite.support)
     implementation(libs.play.services.tflite.gpu)
     implementation(libs.tensorflow.lite.task.vision.play.services)
     implementation(libs.tensorflow.lite.gpu)
     implementation(libs.tensorflow.lite.v290)
-
-
-
-    // Other dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -64,23 +59,20 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    // Coroutine
     implementation(libs.kotlinx.coroutines.android)
-
-    // Retrofit and Glide
     implementation(libs.glide)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
-
-    // Room and ViewModel
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
-    implementation(libs.androidx.room.runtime.v250)  // Pastikan menggunakan versi terbaru
-    implementation(libs.androidx.room.ktx.v250)  // Menambahkan room-ktx untuk coroutine
+    implementation(libs.androidx.room.runtime.v250)  
+    implementation(libs.androidx.room.ktx.v250)
     kapt(libs.androidx.room.compiler.v250)
+    implementation(libs.okhttp.v4100)
+    implementation(libs.material.v130)
+    implementation(libs.gson)
+
 }

@@ -1,6 +1,5 @@
 package com.dicoding.godive.data.remote.api
 
-import com.dicoding.godive.data.remote.response.DivingPlace
 import com.dicoding.godive.data.remote.response.DivingPlaceItem
 import retrofit2.Call
 import retrofit2.Retrofit
